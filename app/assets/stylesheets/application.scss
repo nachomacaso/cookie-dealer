@@ -1,0 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "font-awesome";
+  
+  html {
+    background-image: image-url('black-linen.png');
+    body {
+      background-image: image-url('black-linen.png');
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    h1 {
+      font-family: 'Abril Fatface', cursive;
+    }
+    p ,h5 {
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+  }
+  
+  nav[role="navbar"] {
+    line-height: 50px;
+    font-size: 25px;
+    height: 60px;
+    padding-bottom: 50px;
+    img {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      height: 125px;
+      width: 125px;
+    }
+  }
+
+  div[role="index"] {
+    padding-top: 80px;
+    img {
+      width: 250px;
+      height: 250px;
+    }
+    .well {
+      background-color: #f8f8f8;
+    }
+  }
+
+  div[role="about"] {
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      color: #f8f8f8;
+    }
+    h5 {
+      text-align: center;
+      color: #f8f8f8;
+    }
+    img {
+      border-radius: 2px;
+      border: 2px solid #000;
+    }
+    .thumbnail {
+      padding-top: 125px;
+      background-color: #000;
+      padding-bottom: 125px;
+    }
+    p {
+      font-size: 30px;
+      text-align: center;
+      color: #f8f8f8;
+    }
+  }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    color: #555;
+    p {
+      padding-top: 20px;
+      text-align: center;
+    }
+    a {
+      color: #555;
+    }
+  }
