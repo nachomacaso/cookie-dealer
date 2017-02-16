@@ -16,19 +16,16 @@
  @import "bootstrap";
  @import "font-awesome";
   
-  html {
+  html, body {
     background-image: image-url('black-linen.png');
-    body {
-      background-image: image-url('black-linen.png');
-      font-family: 'Josefin Sans', sans-serif;
-    }
+    font-family: 'Josefin Sans', sans-serif;
+    height: 100%;
     h1 {
-      font-family: 'Abril Fatface', cursive;
+      font-family: 'Allan', cursive;
     }
     p ,h5 {
       font-family: 'Josefin Sans', sans-serif;
     }
-
   }
   
   nav[role="navbar"] {
@@ -57,6 +54,7 @@
   }
 
   div[role="about"] {
+    padding-top: 80px;
     h1 {
       text-align: center;
       font-size: 60px;
@@ -71,9 +69,9 @@
       border: 2px solid #000;
     }
     .thumbnail {
-      padding-top: 125px;
+      padding-top: 115px;
       background-color: #000;
-      padding-bottom: 125px;
+      padding-bottom: 115px;
     }
     p {
       font-size: 30px;
