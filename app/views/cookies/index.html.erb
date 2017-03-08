@@ -1,46 +1,16 @@
-<div role= "index" class="container">
-  <div class="row">
-    <div class="col col-md-3">
-      <div class="well thumbnail index-list">
-        <%= image_tag("cookie.jpg", :alt => "Cookie") %>
-      </div>
+<div role= "cookie-index" class="container">
+  <% @cookies.each_slice(4) do |cookie_row| %>
+    <div class="row">
+      <% cookie_row.each do |cookie| %>
+        <div class="col-md-3">
+          <div class="well thumbnail index-list">
+            <a href="/cookie/<%= cookie.id %>"><%= image_tag("cookie.jpg", :alt => "Cookie") %></a>
+            <h3><%= cookie.title %></h3>
+            <h4>Price:  <%= cookie.price %></h4>
+            <p><a class="btn btn-default" href="/cookie/<%= cookie.id %>" role="button">View Details &raquo;</a></p>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <div class="col col-md-3">
-      <div class="well thumbnail index-list">
-        <%= image_tag("cookie.jpg", :alt => "Cookie") %>
-      </div>
-    </div>
-    <div class="col col-md-3">
-      <div class="well thumbnail index-list">
-        <%= image_tag("cookie.jpg", :alt => "Cookie") %>
-      </div>
-    </div>
-    <div class="col col-md-3">
-      <div class="well thumbnail index-list">
-        <%= image_tag("cookie.jpg", :alt => "Cookie") %>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col col-md-3">
-      <div class="well thumbnail index-list">
-        <%= image_tag("cookie.jpg", :alt => "Cookie") %>
-      </div>
-    </div>
-    <div class="col col-md-3">
-      <div class="well thumbnail index-list">
-        <%= image_tag("cookie.jpg", :alt => "Cookie") %>
-      </div>
-    </div>
-    <div class="col col-md-3">
-      <div class="well thumbnail index-list">
-        <%= image_tag("cookie.jpg", :alt => "Cookie") %>
-      </div>
-    </div>
-    <div class="col col-md-3">
-      <div class="well thumbnail index-list">
-        <%= image_tag("cookie.jpg", :alt => "Cookie") %>
-      </div>
-    </div>
-  </div>
+  <% end %>
 </div>

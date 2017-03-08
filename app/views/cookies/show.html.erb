@@ -1,0 +1,23 @@
+<div role= "cookie-show" class="container">
+  <div class="photo">
+    <%= image_tag("cookie.jpg", :class => "cookie-image") %>
+  </div>
+  <div class="description">
+    <h1><%= @cookie.title %></h1>
+    <p>Price: <%= @cookie.price %></p>
+    <div class="dropdown-quantity">
+    <h3>Quantity:</h3>
+      <select>
+        <option>1 dozen</option>
+        <option>2 dozen</option>
+        <option>3 dozen</option>
+        <option>4 dozen</option>
+      </select>
+      <button>Add To Order</button>
+    </div>
+    <div>
+      <h3>Description:</h3>
+      <h4><%= @cookie.description %>
+    </div>
+  </div>
+</div>

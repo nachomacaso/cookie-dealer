@@ -16,15 +16,23 @@
  @import "bootstrap";
  @import "font-awesome";
   
-  html, body {
+  body {
     background-image: image-url('black-linen.png');
     font-family: 'Josefin Sans', sans-serif;
     height: 100%;
+    margin-bottom: 60px;
+    h1, h3, h4, h5, p {
+      color: #f8f8f8;
+    }
     h1 {
       font-family: 'Allan', cursive;
+      font-size: 60px;
     }
     p ,h5 {
       font-family: 'Josefin Sans', sans-serif;
+    }
+    .container {
+      padding-bottom: 50px;
     }
   }
   
@@ -42,8 +50,11 @@
     }
   }
 
-  div[role="index"] {
+  div[role="cookie-index"] {
     padding-top: 80px;
+    h3, h4 {
+      color: #000000;
+    }
     img {
       width: 250px;
       height: 250px;
@@ -53,12 +64,28 @@
     }
   }
 
+  div[role="cookie-show"] {
+    padding-top: 80px;
+    .container {
+      overflow: hidden;
+    }
+    .photo {
+      float: left;
+    }
+    .cookie-image {
+      border: 1px solid #f8f8f8;
+      width: 500px;
+      height: 500px;
+    }
+    .description {
+      float: right;
+    }
+  }
+
   div[role="about"] {
     padding-top: 80px;
     h1 {
       text-align: center;
-      font-size: 60px;
-      color: #f8f8f8;
     }
     h5 {
       text-align: center;
@@ -76,15 +103,14 @@
     p {
       font-size: 30px;
       text-align: center;
-      color: #f8f8f8;
     }
   }
 
   .footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
-    width: 100%;
     height: 60px;
+    width: 100%;
     background-color: #000;
     color: #555;
     p {

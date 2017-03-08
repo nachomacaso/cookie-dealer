@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get '/', to: 'cookies#index'
+  get '/' => 'cookies#index'
 
-  get '/about', to: 'sections#about'
+  get '/about' => 'sections#about'
+
+  get '/cookie/:id' => 'cookies#show'
 end
