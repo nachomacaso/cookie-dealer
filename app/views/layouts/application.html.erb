@@ -7,5 +7,15 @@
     <%= render '/partials/layout-nav-bar' %>
     <%= yield %>
     <%= render '/partials/layout-footer' %>
+    
+    <!-- Toastr Alert Message -->
+    <% unless flash.empty? %>
+      <script type="text/javascript">
+        <% flash.each do |f| %>
+          <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+             toastr['<%= type %>']('<%= f[1] %>');
+        <% end %>
+      </script>
+    <% end %>
   </body>
 </html>

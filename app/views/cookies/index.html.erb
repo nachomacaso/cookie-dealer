@@ -1,13 +1,23 @@
-<div role= "cookie-index" class="container">
-  <% @cookies.each_slice(4) do |cookie_row| %>
+<div role="cookies" class="container">
+  <% if current_user %>
+    <div class="admin-create">
+      <a class="btn btn-primary" href="/cookies/new" role="button">Create A New Cookie</a>
+    </div>
+  <% end %>
+  <% @cookies.each_slice(3) do |cookie_row| %>
     <div class="row">
       <% cookie_row.each do |cookie| %>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="well thumbnail index-list">
-            <a href="/cookie/<%= cookie.id %>"><%= image_tag("cookie.jpg", :alt => "Cookie") %></a>
+            <% if cookie.pictures.present? %>
+              <a href="/cookies/<%= cookie.id %>"><%= image_tag(cookie.pictures.first.image.url(:medium)) %></a>
+            <% else %>
+              <a href="/cookies/<%= cookie.id %>"><%= image_tag('cookie-monster.png')  %></a>
+            <% end %>
+
             <h3><%= cookie.title %></h3>
             <h4>Price:  <%= cookie.price %></h4>
-            <p><a class="btn btn-default" href="/cookie/<%= cookie.id %>" role="button">View Details &raquo;</a></p>
+            <p><a class="btn btn-default" href="/cookies/<%= cookie.id %>" role="button">View Details &raquo;</a></p>
           </div>
         </div>
       <% end %>

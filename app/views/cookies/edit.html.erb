@@ -1,0 +1,31 @@
+<div role= "cookies" class="container">
+  <h1>Update Cookie</h1>
+  <div class="col-sm-8">
+    <%= simple_form_for @cookie, html: { multipart: true } do |f| %>
+      <%= f.input :title, label: 'Title', error: 'Title is mandatory, please specify a title.' %>
+      <%= f.input :price, label: 'Price', error: 'Price is mandatory, please specify a price.'  %>
+      <%= f.input :description, as: :text, label: 'Description', error: 'Description is mandatory, please specify a description.' %>
+
+      <h5>Image Upload
+        <i class="fa fa-camera-retro" aria-hidden="true"></i>
+      </h5>
+      <%= f.fields_for :pictures do |picture_fields| %>
+        <% if picture_fields.object.new_record? %>
+          <p>
+            <%= picture_fields.file_field :image, :class => "btn btn-danger" %><br/>
+          </p>
+        <% end %>
+      <% end %>
+
+      <h5>Cookie Images</h5>
+      <%= f.fields_for :pictures do |picture_fields|  %>
+        <% unless picture_fields.object.new_record? %>
+          <%= link_to image_tag(picture_fields.object.image.url(:medium))%>
+          <%= picture_fields.check_box :_destroy  %>
+        <% end %>
+      <% end %>
+      <br /><br />
+      <%= f.submit "Update", :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

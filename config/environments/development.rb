@@ -26,6 +26,15 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # Default URL for Devise Mailer *** LOCAL ***
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Default URL for Devise Mailer *** PRODUCTION ***
+  # config.action_mailer.default_url_options = { host: 'https://cookie-dealer.herokuapp.com/' }
+
+  # Location where paperclip will find files
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

@@ -1,23 +1,43 @@
 <div role= "cookie-show" class="container">
-  <div class="photo">
-    <%= image_tag("cookie.jpg", :class => "cookie-image") %>
-  </div>
-  <div class="description">
-    <h1><%= @cookie.title %></h1>
-    <p>Price: <%= @cookie.price %></p>
-    <div class="dropdown-quantity">
-    <h3>Quantity:</h3>
-      <select>
-        <option>1 dozen</option>
-        <option>2 dozen</option>
-        <option>3 dozen</option>
-        <option>4 dozen</option>
-      </select>
-      <button>Add To Order</button>
+  <div class="row">
+    <div class="col-xs-6">
+      <% if @cookie.pictures.present? %>
+        <%= image_tag(@cookie.pictures.first.image.url(:medium)) %>
+      <% else %>
+        <%= image_tag('cookie-monster.png')  %>
+      <% end %>
     </div>
-    <div>
-      <h3>Description:</h3>
-      <h4><%= @cookie.description %>
+    <div class="col-xs-6">
+      <h1><%= @cookie.title %></h1>
+      <p>Price: <%= @cookie.price %></p>
+      <div class="dropdown-quantity">
+      <h3>Quantity:</h3>
+        <select>
+          <option>1 dozen</option>
+          <option>2 dozen</option>
+          <option>3 dozen</option>
+          <option>4 dozen</option>
+        </select>
+        <button class="btn btn-primary">Add To Order</button>
+      </div>
+      <div>
+        <h3>Description:</h3>
+        <h4><%= @cookie.description %></h4>
+      </div>
+      <br />
+      <div>
+        <ul>
+          <% for picture in @cookie.pictures %>
+            <li><%= link_to image_tag(picture.image.url(:small)), picture.image.url(:original), :popup=>['original_image', 'height=700,width=900'] %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div>
+        <% if current_user %>
+          <p><a class="btn btn-default" href="/cookies/<%= @cookie.id %>/edit" role="button">Edit</a>
+          <%= link_to 'Delete', "/cookies/#{@cookie.id}", method: :delete, class:"btn btn-danger" %></p>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

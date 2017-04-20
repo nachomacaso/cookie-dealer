@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-  get '/' => 'cookies#index'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'
+  }
+  root 'cookies#index'
+  resources :cookies
+
+  resources :pictures do
+    delete :destroy_multiple, action: :destroy, on: :collection
+  end
 
   get '/about' => 'sections#about'
-
-  get '/cookie/:id' => 'cookies#show'
 end
