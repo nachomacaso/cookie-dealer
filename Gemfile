@@ -32,7 +32,7 @@ gem 'toastr-rails'
 # Paperclip for image uploads
 gem 'paperclip', '~> 5.0.0'
 # Amazon S3
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk', '~> 2'
 # Simple Forms
 gem 'simple_form'
 # Use jquery as the JavaScript library
