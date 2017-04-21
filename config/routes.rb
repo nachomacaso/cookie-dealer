@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   }
   root 'cookies#index'
   resources :cookies
+  resources :orders
 
   resources :pictures do
     delete :destroy_multiple, action: :destroy, on: :collection

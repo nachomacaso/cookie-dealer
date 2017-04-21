@@ -1,0 +1,14 @@
+<div role="orders" class="container">
+  <h1>PLACE AN ORDER</h1>
+  <div class="col-sm-8">
+    <%= simple_form_for @order, html: { multipart: true } do |f|  %>
+      <%= f.input :first_name, label: 'First Name', error: 'First name is mandatory, please specify a first name.' %>
+      <%= f.input :last_name, label: 'Last Name', error: 'Last name is mandatory, please specify a last name.' %>
+      <%= f.input :phone, as: :tel, label: 'Phone Number', error: 'Phone number is mandatory, please specify a phone number.' %>
+      <%= f.input :email, label: 'Email', error: 'Email is mandatory, please specify a email.' %>
+      <%= f.input :address, label: 'Address', error: 'Address is mandatory, please specify a address.' %>
+
+      <%= f.submit "Place Order", :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

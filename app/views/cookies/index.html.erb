@@ -15,7 +15,7 @@
               <a href="/cookies/<%= cookie.id %>"><%= image_tag('cookie-monster.png')  %></a>
             <% end %>
 
-            <h3><%= cookie.title %></h3>
+            <h3><%= cookie.title.upcase %></h3>
             <h4>Price:  <%= cookie.price %></h4>
             <p><a class="btn btn-default" href="/cookies/<%= cookie.id %>" role="button">View Details &raquo;</a></p>
           </div>

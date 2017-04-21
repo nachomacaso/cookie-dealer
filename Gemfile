@@ -25,10 +25,14 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 # User/Admin authentication
 gem 'devise'
+# Figaro
+gem 'figaro'
 # Alert messages for authentication
 gem 'toastr-rails'
 # Paperclip for image uploads
 gem 'paperclip', '~> 5.0.0'
+# Amazon S3
+gem 'aws-sdk', '~> 2.3'
 # Simple Forms
 gem 'simple_form'
 # Use jquery as the JavaScript library

@@ -126,6 +126,7 @@
       text-align: center;
     }
   }
+
   div[role="user"] {
     padding-top: 60px;
     h2 {
@@ -133,6 +134,13 @@
     }
     label, em {
     color: #f8f8f8;
+    }
+  }
+
+  div[role="orders"] {
+    padding-top: 80px;
+    label {
+      color: #f8f8f8;
     }
   }
 

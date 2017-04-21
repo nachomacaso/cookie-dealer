@@ -8,7 +8,7 @@
       <% end %>
     </div>
     <div class="col-xs-6">
-      <h1><%= @cookie.title %></h1>
+      <h1><%= @cookie.title.upcase %></h1>
       <p>Price: <%= @cookie.price %></p>
       <div class="dropdown-quantity">
       <h3>Quantity:</h3>
@@ -22,7 +22,8 @@
       </div>
       <div>
         <h3>Description:</h3>
-        <h4><%= @cookie.description %></h4>
+        <h4><%= @cookie.description %></h4><br />
+        <p>** All cookies are made to order.  After email confirmation, please allow 24 hours for delivery.  For additional questions, please contact <a href="mailto:mhernandez2876@gmail.com">Chef Mike</a> **</p>
       </div>
       <br />
       <div>
