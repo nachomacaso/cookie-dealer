@@ -1,5 +1,45 @@
-<footer class="footer">
-  <div class="container">
-    <p class="text-muted">© 2017 <%= link_to "nachomacaso",  "http://nathan-macaso.herokuapp.com" %></p>
-  </div>
-</footer>
+<div class="section section-min">
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4 col-md-push-4 text-center">
+              <%= image_tag("cookie-dealer-logo.png", alt: "footer-logo", class: "footer-logo") %>
+              <div class="social">
+                <ul>
+                  <li><a href="https://www.facebook.com/cookiedealer2017" target="_blank"><span class="ti-facebook"></span></a></li>
+                  <li><a href="https://twitter.com/" target="_blank"><span class="ti-twitter-alt"></span></a></li>
+                  <li><a href="https://www.instagram.com/cookiedealer2017" target="_blank"><span class="ti-instagram"></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-12">
+              <div class="footer-newsletter">
+                <div class="center text-center">
+                  <h4>stay tuned</h4>
+                  <form action="#" method="post">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="e-mail"> 
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" type="button"><span class="ti-arrow-right"></span></button>
+                      </span>
+                    </div>
+                  </form>
+                  <br />
+                  <br />
+                  <p class="text-muted">© 2017 <%= link_to "nachomacaso",  "http://nathan-macaso.herokuapp.com" %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

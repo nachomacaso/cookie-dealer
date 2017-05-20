@@ -14,5 +14,14 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require toastr
+//= require wow
+//= require jquery-1.11.2.min
+//= require swiper.min
+//= require bootstrap.min
+//= require jquery.countTo
+//= require jquery.inview
+//= require jquery.countdown
+//= require tt-cart
+//= require main
 //= require turbolinks
 //= require_tree .

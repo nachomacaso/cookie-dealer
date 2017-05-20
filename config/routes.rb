@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
-  root 'cookies#index'
+  root 'cookies#store'
   resources :cookies
   resources :orders
 

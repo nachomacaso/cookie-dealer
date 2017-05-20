@@ -1,5 +1,5 @@
 class CookiesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :store]
 
   def index
     @cookies = Cookie.all
@@ -48,6 +48,9 @@ class CookiesController < ApplicationController
 
     flash[:danger] = 'Cookie Successfully Deleted!'
     redirect_to '/cookies'
+  end
+
+  def store
   end
 
   private

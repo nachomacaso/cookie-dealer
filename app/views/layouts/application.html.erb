@@ -3,11 +3,12 @@
 
   <%= render '/partials/layout-head' %>
 
-  <body>
+  <body data-offset="50" data-spy="scroll" data-target=".navbar" class="dark-theme">
     <%= render '/partials/layout-nav-bar' %>
     <%= yield %>
     <%= render '/partials/layout-footer' %>
     
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_6m6Glf1-P7jvVdHZ00e3Ue_EoUNe39g"></script>
     <!-- Toastr Alert Message -->
     <% unless flash.empty? %>
       <script type="text/javascript">

@@ -11,151 +11,48 @@
  * It is generally better to create a new file per style scope.
  *
  *= require toastr
+ *= require css/bootstrap-dark
+ *= require css/theme-dark
  */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "font-awesome";
-  
-  body {
-    background-image: image-url('black-linen.png');
-    font-family: 'Josefin Sans', sans-serif;
-    height: 100%;
-    margin-bottom: 60px;
-    h1, h2, h3, h4, h5, h6, p, li {
-      color: #f8f8f8;
-    }
-    h1 {
-      font-family: 'Allan', cursive;
-      font-size: 60px;
-    }
-    p ,h5 {
-      font-family: 'Josefin Sans', sans-serif;
-    }
-    .container {
-      padding-bottom: 50px;
-    }
-  }
-  
-  nav[role="navbar"] {
-    line-height: 50px;
-    font-size: 25px;
-    height: 70px;
-    padding-bottom: 50px;
-    img {
-      position: relative;
-      top: -10px;
-      left: -10px;
-      height: 140px;
-      width: 180px;
-    }
-  }
+ @font-face {
+  src:font-url('glyphicons-halflings-regular.eot');
+  src:url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('glyphicons-halflings-regular.ttf') format('truetype'),
+    url('glyphicons-halflings-regular.woff') format('woff'),
+    url('glyphicons-halflings-regular.woff2') format('woff2'),
+    url('glyphicons-halflings-regular.svt') format('svt');
+  src:font-url('themify.eot');
+  src:url('themify.eot?#iefix') format('embedded-opentype'),
+    url('themify.ttf') format('truetype'),
+    url('themify.woff') format('woff'),
+    url('themify.svg') format('svg');
+ } 
 
-  div[role="cookies"] {
-    padding-top: 80px;
-    h3, h4 {
-      color: #000000;
-    }
-    h5 {
-      color: #f8f8f8;
-      font-weight: bold;
-    }
-    img {
-      width: 250px;
-      height: 250px;
-    }
-    .well {
-      background-color: #f8f8f8;
-    }
-    label {
-      color: #f8f8f8;
-    }
-    input#cookie-image {
-      color: #f8f8f8;
-    }
-    .admin-create {
-      position: absolute;
-      top: 100px;
-      right: 70px;
-    }
-  }
+ a {
+  color: #FFF;
+ }
 
-  div[role="cookie-show"] {
-    padding-top: 80px;
-    .container {
-      overflow: hidden;
-    }
-    .photo {
-      float: left;
-    }
-    .cookie-image {
-      border: 1px solid #f8f8f8;
-      width: 500px;
-      height: 500px;
-    }
-    .description {
-      float: right;
-    }
-    ul li {
-      list-style: none;
-      display: inline;
-    }
-  }
+ .about-mike {
+  width: 65%;
+ }
 
-  div[role="about"] {
-    padding-top: 80px;
-    h1 {
-      text-align: center;
-    }
-    h5 {
-      text-align: center;
-      color: #f8f8f8;
-    }
-    img {
-      border-radius: 2px;
-      border: 2px solid #000;
-      height: 20%;
-    }
-    .thumbnail {
-      padding-top: 115px;
-      background-color: #000;
-      padding-bottom: 115px;
-    }
-    p {
-      font-size: 30px;
-      text-align: center;
-    }
-  }
+ .about-white-box {
+  height: 600px;
+ }
 
-  div[role="user"] {
-    padding-top: 60px;
-    h2 {
-      text-align: center;
-    }
-    label, em {
-    color: #f8f8f8;
-    }
-  }
+ .contact {
+  background-image: linear-gradient(#000, transparent), url(contact.jpg);
+ }
 
-  div[role="orders"] {
-    padding-top: 80px;
-    label {
-      color: #f8f8f8;
-    }
-  }
+ .swiper-home {
+  background-image: linear-gradient(#000, transparent), url(contact.jpg);
+ }
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-    background-color: #000;
-    color: #555;
-    p {
-      padding-top: 20px;
-      text-align: center;
-    }
-    a {
-      color: #555;
-    }
-  }
+ img.product-list-primary-img {
+  width: 20%;
+}
+
+ img.product-list-secondary-img {
+  width: 20%;
+ }

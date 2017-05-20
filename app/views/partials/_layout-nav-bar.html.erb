@@ -1,44 +1,28 @@
-<nav class="navbar navbar-default" role="navbar">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
+<nav class="navbar navbar-fixed-top shadow" id="js-nav">
+  <div class="container-fluid">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"><%= image_tag("cookie-dealer-logo.png", :alt => "Cookie Dealer", :class => "nav-logo")%></a>
+      <button type="button" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button">
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/"><%= image_tag("cookie-dealer-logo2.png", :alt => "Cookie Dealer", :class => "nav-logo")%></a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="/">OUR COOKIES</a></li>
-        <li><a href="/orders/new">ORDER</a></li>
-        <li><a href="/about">ABOUT</a></li>
-        <li><a href="mailto:mhernandez2876@gmail.com">CONTACT</a></li>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#home">home</a></li>
+        <li><a href="#products">cookies</a></li>
+        <li><a href="#about">about us</a></li>
+        <li><a href="#contact">contact</a></li>
         <li>
           <% if user_signed_in? %>
-            <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %>        
+            <%= link_to('logout', destroy_user_session_path, :method => :delete) %>        
           <% else %>
-            <%= link_to('LOGIN', new_user_session_path)  %>
+            <%= link_to('login', new_user_session_path)  %>
           <% end %>
         </li>
       </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="https://www.instagram.com/cookiedealer2017">
-          <i class="fa fa-instagram"></i>
-           </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/cookiedealer2017">
-          <i class="fa fa-facebook-square"></i>
-           </a>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
