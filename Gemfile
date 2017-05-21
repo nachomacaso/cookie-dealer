@@ -15,6 +15,8 @@ gem 'puma', '~> 3.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# themify icons
+gem 'themify-icons-rails', github: 'scratch-soft/themify-icons-rails'
 # Font Awesome
 gem 'font-awesome-rails'
 # Use Uglifier as compressor for JavaScript assets

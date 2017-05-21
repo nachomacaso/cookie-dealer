@@ -13,9 +13,10 @@
  *= require toastr
  *= require css/bootstrap-dark
  *= require css/theme-dark
+ *= require themify-icons
  */
 
- @font-face {
+  @font-face {
   src:font-url('glyphicons-halflings-regular.eot');
   src:url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
     url('glyphicons-halflings-regular.ttf') format('truetype'),
@@ -42,11 +43,11 @@
  }
 
  .contact {
-  background-image: linear-gradient(#000, transparent), url(contact.jpg);
+  background-image: linear-gradient(#161615, transparent), url(<%= asset_path 'contact.jpg' %>);
  }
 
  .swiper-home {
-  background-image: linear-gradient(#000, transparent), url(contact.jpg);
+  background-image: linear-gradient(#161615, transparent), url(<%= asset_path 'home.jpg' %>);
  }
 
  img.product-list-primary-img {
